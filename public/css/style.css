@@ -39,4 +39,14 @@ body {
 
 nav li:hover {
     border: 2px solid black;
+    padding: 2px;
+ }
+ 
+#mainContainer {
+    margin-top: 130px;
+}
+
+.tint:hover {
+    background: var(--yellow);
+    filter: sepia(200%) saturate(400%) brightness(85%) hue-rotate(-10deg);
 }
