@@ -1,0 +1,42 @@
+:root {
+    --yellow: rgb(255,193,7);
+    --black: black;
+    --white: white;
+    --techFont:'Quantico', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-color: var(--black);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;  
+}
+
+.custom-navbar {
+    background-color: var(--yellow);
+}
+
+#title {
+    color: var(--black);
+    font-family: var(--techFont);
+}
+
+.custom-btn {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.custom-btn:hover {
+    color: var(--yellow);
+}
+
+nav li:hover {
+    border: 2px solid black;
+}
