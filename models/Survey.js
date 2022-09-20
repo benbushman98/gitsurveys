@@ -20,7 +20,7 @@ Survey.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    creator_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
