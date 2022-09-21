@@ -15,8 +15,13 @@ const seedDatabase = async () => {
 
   for (const survey of surveyData) {
     await Survey.create({
-      ...survey,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
+      ...survey
+      // user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
+  for (const question of questionData) {
+    await Question.create({    
+      ...question
     });
   }
 
@@ -26,3 +31,6 @@ const seedDatabase = async () => {
 };
 
 seedDatabase();
+
+//  for survey data; Do we need to include a key for "user_id" and a value?
+// Do we need to include a value for "date_created"?
