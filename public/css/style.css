@@ -56,7 +56,8 @@ nav li:hover {
 
 #carouselExampleIndicators {
     margin-top: -40px;
-    
+}
+
 .custom-loginbtn {
     background-color: var(--yellow);
     color: var(--black);
