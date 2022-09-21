@@ -12,5 +12,20 @@
     "title": "Nationality Survey",
     "date_created": "2000-02-13 04:33:12",
     "user_id": 3
+  },
+  {
+    "title": "The Best TA",
+    "date_created": "2024-02-13 04:33:12",
+    "user_id": 4
+  },
+  {
+    "title": "The Best Ice Cream",
+    "date_created":  "2024-02-13 04:33:12",
+    "user_id": 5
+  },
+  {
+    "title": "The Basketball GOAT",
+    "date_created":  "1998-02-13 04:33:12",
+    "user_id": 6
   }
 ]
