@@ -14,7 +14,7 @@ Question.init(
     survey_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'survey',
         key: 'id',
       },
     },
