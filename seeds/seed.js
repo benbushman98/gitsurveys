@@ -20,6 +20,8 @@ const seedDatabase = async () => {
     });
   }
 
+  //We still need to work with the questionData and revise the .json files in this folder
+  
   process.exit(0);
 };
 
