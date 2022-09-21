@@ -50,3 +50,8 @@ nav li:hover {
     background: var(--yellow);
     filter: sepia(200%) saturate(400%) brightness(85%) hue-rotate(-10deg);
 }
+
+.custom-loginbtn {
+    background-color: var(--yellow);
+    color: var(--black);
+}
