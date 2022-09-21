@@ -11,7 +11,7 @@ Survey.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
-Survey.hasOne(Question, {
+Survey.hasMany(Question, {
   foreignKey: 'survey_id',
 })
 

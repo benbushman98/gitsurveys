@@ -12,5 +12,21 @@
     "question_body":   "What is your favorite food?",
     "survey_id": "1",
     "response": "Grapes"
+  },
+  {
+    "question_body":   "Which TA is the best?",
+    "survey_id": "4",
+    "response": "All of them! But prolly Eric tbh"
+  },
+  {
+    "question_body": "What is your favorite ice cream?",
+    "survey_id": "5",
+    "response": "del taco sauce"
+  },
+  {
+    "question_body": "Which basketball player is the GOAT?",
+    "survey_id": "6",
+    "response": "M.J. obviously. No one was better than Michael Jackson."
   }
+
 ]
