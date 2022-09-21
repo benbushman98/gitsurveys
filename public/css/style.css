@@ -15,7 +15,7 @@ body {
     background-color: var(--black);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
+    background-position: left;
     background-size: cover;  
 }
 
@@ -46,11 +46,17 @@ nav li:hover {
     margin-top: 130px;
 }
 
-.tint:hover {
-    background: var(--yellow);
-    filter: sepia(200%) saturate(400%) brightness(85%) hue-rotate(-10deg);
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFC107' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+   }
+   
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFC107' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
 
+#carouselExampleIndicators {
+    margin-top: -40px;
+    
 .custom-loginbtn {
     background-color: var(--yellow);
     color: var(--black);
