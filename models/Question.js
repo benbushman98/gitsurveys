@@ -14,24 +14,16 @@ Question.init(
     survey_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'survey',
         key: 'id',
       },
-    },
-    type: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    instructions: {
-        type: DataTypes.STRING,
-        allowNull: false,
     },
     question_body: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    possible_answers:{
-        type: DataTypes.TEXT, //I'm not sure if this is the best DATA type
+    response:{
+        type: DataTypes.STRING(500), 
         allowNull: false,
     },
   },
