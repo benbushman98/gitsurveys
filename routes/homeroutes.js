@@ -12,6 +12,24 @@ router.get('/', (req, res) => {
   router.get('/signup', (req, res) => {
     res.render('signup', {layout: 'main2'}) 
   });
+
+  router.get('/', async (req, res) => {
+    try{
+      const allSurveysData = await Survey.findAll({
+        include: [
+          {
+            model: Question,
+            attributes: ['question_body', 'response'],
+          },
+        ],
+      });
+    const surveys = allSurveysData.map((survey) =>
+    survey.get({plain:true}))
+    }catch(err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  })
   
 
 module.exports = router;

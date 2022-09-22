@@ -14,7 +14,7 @@
     "user_id": 3
   },
   {
-    "title": "The Best TA",
+    "title": "The Best 90's Band",
     "date_created": "2024-02-13 04:33:12",
     "user_id": 4
   },
@@ -26,6 +26,14 @@
   {
     "title": "The Basketball GOAT",
     "date_created":  "1998-02-13 04:33:12",
-    "user_id": 6
+    "user_id": 4
+  },
+  {
+    "title": "The Best Olympic Event",
+    "user_id": 4
+  },
+  {
+    "title": "The Best Pet",
+    "User_id": 4
   }
 ]

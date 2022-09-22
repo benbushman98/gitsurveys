@@ -14,7 +14,7 @@
     "response": "Grapes"
   },
   {
-    "question_body":   "Which TA is the best?",
+    "question_body":   "What is the best band of the 90's",
     "survey_id": "4",
     "response": "All of them! But prolly Eric tbh"
   },
@@ -27,6 +27,16 @@
     "question_body": "Which basketball player is the GOAT?",
     "survey_id": "6",
     "response": "M.J. obviously. No one was better than Michael Jackson."
+  }
+  {
+    "question_body": "What is your favorite Olympic Event?",
+    "survey_id": "6",
+    "response": "Curling"
+  }
+  {
+    "question_body": "Which animal makes the best pet.",
+    "survey_id": "6",
+    "response": "Dogz"
   }
 
 ]
