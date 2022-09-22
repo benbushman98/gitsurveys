@@ -16,10 +16,10 @@ router.get('/', (req, res) => {
 
   
   
-  // We wan tto get the survey id to be pulled up automatically
+  // We want to get the survey id to be pulled up automatically
   router.get('/survey/:id', async (req, res) => {
     try{
-      const allSurveysData = await Survey.findByPk(req.params.id,{
+      const surveyData = await Survey.findByPk(req.params.id,{
         include: [
           {
             model: Question,
@@ -28,16 +28,22 @@ router.get('/', (req, res) => {
         ],
        
       });
-      if (!allSurveysData) {
+      if (!surveyData) {
         console.log(error, 'Not found')
       }
-      const survey =  allSurveysData.get({plain:true});
+    //This connects to handlebars, but still doesn't display anything
+      const survey =  surveyData.get({plain:true});
+      // allSurveysData.map((survey) =>
       res.render('singlesurvey', {
         ...survey
-        }
-      )
-    // res.status(200).json(allSurveysData);
-    // allSurveysData.map((survey) =>
+      }
+      );
+     
+    // console.log(allSurveysData);
+
+    //↓This shows the data from the database
+      // res.status(200).json(allSurveysData);
+
    
     } catch (err) {
       console.log(err);
