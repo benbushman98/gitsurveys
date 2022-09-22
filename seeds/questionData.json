@@ -30,13 +30,13 @@
   }
   {
     "question_body": "What is your favorite Olympic Event?",
-    "survey_id": "6",
+    "survey_id": "7",
     "response": "Curling"
   }
   {
     "question_body": "Which animal makes the best pet.",
-    "survey_id": "6",
-    "response": "Dogz"
+    "survey_id": "8",
+    "response": "Dogs"
   }
 
 ]
