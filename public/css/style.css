@@ -80,17 +80,6 @@ nav li:hover {
     cursor: pointer;
 }
 
-.rotate {
-    transition: 1s ease;
-}
-    
-.rotate:hover{
-    -webkit-transform: rotateZ(-10deg);
-    -ms-transform: rotateZ(-10deg);
-    transform: rotateZ(-10deg);
-    transition: 1s ease;
-}
-
 /* BACKGROUND COLORS */
 .bg-yellow {
     background-color: var(--yellow);
