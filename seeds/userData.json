@@ -18,5 +18,16 @@
     "name": "Eric",
     "email": "Eric@Ericpants.com",
     "password": "EricPants"
+  },
+  {
+    "name": "Charly",
+    "email": "charly1@hotmail.com",
+    "password": "iamcharlyblue123"
+  },
+  {
+    "name": "Natasha",
+    "email": "natty@gmail.com.com",
+    "password": "nattynuts"
   }
+
 ]
