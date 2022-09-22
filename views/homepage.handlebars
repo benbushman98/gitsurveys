@@ -1,37 +1,54 @@
 <div class="container">
 
-    <div class="row forYouBox techFont">
-        <div class="row whiteText">
-            WHAT CAN WE
-        </div>
-        <div class="row whiteText">
-            ANSWER <div class="yellowText">&nbsp;FOR YOU</div>
-        </div>
+    <div class="row forYouBox text-center">
+        <div class="techFont whiteText">WHAT CAN WE<br>ANSWER<span class="yellowText techFont">&nbsp;FOR YOU</span></div>
     </div>
 
+    {{!-- HOW GIT SURVEYS WORKS --}}
     <div class="row mx-4">
-        <div class="col bg-yellow m-4 p-3">
-            <h1 class="whiteText ml-1">How<span class="title">&nbsp;Git Surveys&nbsp;</span> Works...</h1>
-                <ol class="h4">
-                    <li>Sign-up</li>
-                    <li>Create a survey in your dashboard</li> 
-                    <li>Generate the link</li>
-                    <li>Share the link with your friends!</li>
-                    <li>Revisit GitSurveys to view the results!</li>
-                </ol>
+        <div class="col bg-yellow content_center pointer rounded-circle rotate m-4 p-5" data-toggle="modal" data-target="#stepsModal">
+            <div class="row text-center">
+                <h1 class="whiteText">How<br><span class="title">Git Surveys</span><br>Works</h1>
+            </div>
+            {{!-- modal --}}
+            <div class="modal fade" id="stepsModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">How Git Surveys Works</h5>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <ol class="h5">
+                                <li>Sign-up</li>
+                                <li>Create a survey in your dashboard</li> 
+                                <li>Generate the link</li>
+                                <li>Share the link with your friends</li>
+                                <li>Revisit GitSurveys to view the results!</li>
+                            </ol>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>  
         </div>
 
-        <div class="col bg-yellow m-4 p-3">
-            <h1 class="text-center title">Example Surveys</h1>
-            <div class="row justify-content-center">
-                <div id="carouselExampleIndicators" class="carousel w-100" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner p-5">
-                        <div class="carousel-item active">
+        {{!-- EXAMPLE SURVEYS    --}}
+        <div class="col bg-yellow content_center pointer rounded-circle rotate m-4 p-5" data-toggle="modal" data-target="#staticBackdrop">
+            <div class="row text-center">
+                <h1 class="whiteText">Example<br><span class="title">Surveys</span></h1>
+            </div>
+            {{!-- modal --}}
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Example Surveys</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
                             <div class="card">
                                 <div class="card-body text-center">
                                     <h5 class="card-title">What is your favorite ice cream?</h5>
@@ -39,8 +56,6 @@
                                     <a href="/survey/5" class="btn custom-btn py-1">View</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
                             <div class="card">
                                 <div class="card-body text-center">
                                     <h5 class="card-title">Which basketball player is the GOAT?</h5>
@@ -48,8 +63,6 @@
                                     <a href="/survey/6" class="btn custom-btn py-1">View</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
                             <div class="card">
                                 <div class="card-body text-center">
                                     <h5 class="card-title">Who is the best 90s band?</h5>
@@ -58,33 +71,31 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="row mx-4">
-        <div class="col bg-yellow text-center m-4 p-2">
-            <h1 class="title">Walkthrough Video</h1>
-            <video class="w-100 mt-3" controls>
-                <source src="/images/placeholdervideo.webm" type="video/webM">
-                Your browser does not support the video tag.
-            </video> 
-            <p class="mb-small">*Placeholder video*</p>
-        </div>
-
-        <div class="col bg-yellow text-center m-4 p-2">
-            <img src="/images/checkgraphic.jpg" alt="checkbox graphic" id="homepageGraphic" class="w-100 mt-4"><br>
-            <a href="https://www.freepik.com/free-vector/young-worker-man-woman-chooses-check-mark-puts-it-check-survey-box-cartoon-vector-illustration_22821972.htm#query=survey&position=37&from_view=keyword" class="mb-small">Image by jcomp</a> on Freepik
-        </div>
+        {{!-- Create a Survey --}}
+        {{#if loggedIn}}
+            <div class="col bg-yellow content_center pointer rounded-circle rotate m-4 p-5">
+                <a href="/dashboard">
+                    <div class="row text-center">
+                        <h1 class="whiteText">Create a<br><span class="title">Survey</span></h1>
+                    </div>
+                </a>
+            </div>
+        {{else}}
+            <div class="col bg-yellow content_center pointer rounded-circle rotate m-4 p-5">
+                <a href="/login">
+                    <div class="row text-center">
+                        <h1 class="whiteText">Create a<br><span class="title">Survey</span></h1>
+                    </div>
+                </a>
+            </div>
+        {{/if}}  
     </div>
 </div>
