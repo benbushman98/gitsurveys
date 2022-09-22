@@ -52,6 +52,10 @@ body {
     color: var(--black);
 }
 
+.custom-loginbtn:hover {
+    color: var(--white);
+}
+
 nav li:hover {
     border: 2px solid black;
     padding: 2px;
@@ -74,13 +78,27 @@ nav li:hover {
 .forYouBox {
     margin-top: 85px;
     font-size: 130px;
+    justify-content: center;
+}
+
+.yourSurveysBox {
+    margin-top: 100px;
 }
 
 .bg-yellow {
     background-color: var(--yellow);
 }
 
+.bg-black {
+    background-color: var(--black);
+}
+
 /* MEDIA MARGINS */
 .mb-small {
     margin-bottom: -18px;
+}
+
+/* HIDE ELEMENTS */
+.hide {
+    display: none;
 }

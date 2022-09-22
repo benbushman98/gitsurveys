@@ -1,0 +1,57 @@
+<section class="card yourSurveysBox mb-4 mx-4">
+    <div class="card-header bg-black yellowText">Your Surveys</div>
+    <div>
+        <ul>
+            {{#if survey.length}}
+                {{#each survey}}
+                <a href="/dashboard/edit/{{id}}" class="noStyle">
+                    <li class="mt-2">
+                        <div>{{format_date date_created}} {{title}}</div>
+                    </li>
+                </a>
+                {{/each}}
+            {{else}}
+            <p class="font-italic mt-2">You have no surveys at this time.</p>
+            {{/if}}
+        </ul>
+    </div>
+</section>
+
+<section class="card mx-4 mb-5 hide" id="surveyForm">
+    <div class="card-header bg-black yellowText">Create New Survey</div>
+    <div class="card-body">
+        <form class="newSurveyForm">
+            <div>
+                <label for="surveyTitle" class="form-label">Title:</label>
+                <input class="form-input w-100 mb-2" id="surveyTitle" type="text" name="title"/>
+            </div>
+            <div>
+                <label for="surveyQuestion" class="form-label">Question:</label>
+                <input class="form-input w-100 mb-2" id="surveyQuestion" type="text" name="question"/>
+            </div>
+            <div>
+                <label for="surveyOption" class="form-label">Option 1:</label>
+                <input class="form-input w-100 mb-3" id="surveyOption1" type="text" name="option"/>
+            </div>
+            <div>
+                <label for="surveyOption" class="form-label">Option 2:</label>
+                <input class="form-input w-100 mb-3" id="surveyOption2" type="text" name="option"/>
+            </div>
+            <div>
+                <label for="surveyOption" class="form-label">Option 3:</label>
+                <input class="form-input w-100 mb-3" id="surveyOption3" type="text" name="option"/>
+            </div>
+            <div>
+                <label for="surveyOption" class="form-label">Option 4:</label>
+                <input class="form-input w-100 mb-3" id="surveyOption4" type="text" name="option"/>
+            </div>
+            <button type="submit" class="btn custom-btn" id="submitSurvey">Generate Link</button>
+        </form>
+    </div>
+</section>
+
+<div class="text-center mt-3">
+    <button type="button" class="btn custom-loginbtn mx-auto" style="width: 200px;" id="createBtn">+ Create Survey</button> 
+</div>
+
+<script src="./js/create.js"></script> 
