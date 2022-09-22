@@ -1,0 +1,83 @@
+<div class="container topMargin bg-white rounded p-3">
+
+    <table class="table bg-white p-5">
+        <thead class="thead bg-white">
+            <tr class="h2 techFont pb-0">
+                {{!-- QUESTION --}}
+            <th scope="col">Question Here {{survey.question}}</th>
+            <th scope="col">Results</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <th scope="row">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                        {{!-- OPTION 1 --}}
+                        Option 1 {{survey.option1}} 
+                    </label>
+                </div>
+            </th>
+            <td>
+                <div class="progress">
+                    {{!-- RESULTS 1 --}}
+                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div>
+            </td>
+            </tr>
+            <tr>
+            <th scope="row">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                        {{!-- OPTION 2 --}}
+                        Option 2 {{survey.option2}} 
+                    </label>
+                </div>
+            </th>
+            <td>
+                <div class="progress">
+                    {{!-- RESULTS 2 --}}
+                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                </div>
+            </td>
+            </tr>
+            <tr>
+            <th scope="row">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" checked>
+                    <label class="form-check-label" for="exampleRadios3">
+                        {{!-- OPTION 3 --}}
+                        Option 3 {{survey.option3}} 
+                    </label>
+                </div>
+            </th>
+            <td>
+                <div class="progress">
+                    {{!-- RESULTS 3 --}}
+                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10%</div>
+                </div>
+            </td>
+            </tr>
+            <tr>
+            <th scope="row">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4" checked>
+                    <label class="form-check-label" for="exampleRadios4">
+                        {{!-- OPTION 4 --}}
+                        Option 4 {{survey.option4}} 
+                    </label>
+                </div>
+            </th>
+            <td>
+                <div class="progress">
+                    {{!-- RESULTS 4 --}}
+                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">15%</div>
+                </div>
+            </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
