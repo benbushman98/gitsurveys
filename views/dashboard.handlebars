@@ -2,17 +2,18 @@
     <div class="card-header bg-black yellowText h2">Your Surveys</div>
     <div>
         <ul>
-            {{#if survey.length}}
+            {{!-- WE CAN UNCOMMENT {{#IF}} ONCE WE ARE ABLE TO CREATE A NEW SURVEY & ADD IT TO THE DATABASE --}}
+            {{!-- {{#if survey.length}} --}} 
                 {{#each surveys as |survey|}}
-                <a href="/dashboard/edit/{{id}}" class="noStyle">
-                    <li class="mt-2">
-                        <div>{{format_date date_created}} {{title}} LINK</div>
+                <a href="/survey/{{id}}" class="noStyle">
+                    <li class="mySurveyList mt-2">
+                        <div>{{format_date date_created}}: "{{title}}"</div>
                     </li>
                 </a>
                 {{/each}}
-            {{else}}
+            {{!-- {{else}}
             <p class="font-italic mt-2">You have no surveys at this time.</p>
-            {{/if}}
+            {{/if}} --}}
         </ul>
     </div>
 </section>
@@ -31,21 +32,21 @@
             </div>
             <div>
                 <label for="surveyOption" class="form-label">Option 1:</label>
-                <input class="form-input w-100 mb-3" id="surveyOption1" type="text" name="option"/>
+                <input class="form-input w-100 mb-3" id="option1" type="text" name="option1"/>
             </div>
             <div>
                 <label for="surveyOption" class="form-label">Option 2:</label>
-                <input class="form-input w-100 mb-3" id="surveyOption2" type="text" name="option"/>
+                <input class="form-input w-100 mb-3" id="option2" type="text" name="option2"/>
             </div>
             <div>
                 <label for="surveyOption" class="form-label">Option 3:</label>
-                <input class="form-input w-100 mb-3" id="surveyOption3" type="text" name="option"/>
+                <input class="form-input w-100 mb-3" id="option3" type="text" name="option3"/>
             </div>
             <div>
                 <label for="surveyOption" class="form-label">Option 4:</label>
-                <input class="form-input w-100 mb-3" id="surveyOption4" type="text" name="option"/>
+                <input class="form-input w-100 mb-3" id="option4" type="text" name="option4"/>
             </div>
-            <button type="submit" class="btn custom-btn" id="submitSurvey">Generate Link</button>
+            <button type="submit" class="btn custom-btn" id="submitSurvey">Submit</button>
         </form>
     </div>
 </section>

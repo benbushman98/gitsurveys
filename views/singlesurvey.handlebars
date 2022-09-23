@@ -1,13 +1,11 @@
-<div class="container topMargin bg-white rounded p-3">
+<div class="container topMargin text-center bg-white rounded p-3">
+
+    {{!-- TITLE/DATE CREATED/CREATER NAME/ID --}}
+    <h1>{{title}}</h1> 
+    <h2>Created on: {{format_date date_created}} by {{name}}</h2>
+    <h3>Share link: GitSurveys.com/survey/{{id}}</h3>
 
     <table class="table bg-white p-5">
-        <thead class="thead bg-white">
-            <tr class="h2 techFont pb-0">
-                {{!-- TITLE/DATE CREATED/CREATER NAME --}}
-            <th scope="col">{{title}}, Created on: {{format_date date_created}} by {{name}}</th>
-            <th scope="col"></th>
-            </tr>
-        </thead>
         <thead class="thead bg-white">
             <tr class="h2 techFont pb-0">
                 {{!-- QUESTION --}}
