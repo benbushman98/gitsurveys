@@ -3,7 +3,7 @@
     <div>
         <ul>
             {{#if survey.length}}
-                {{#each survey}}
+                {{#each surveys as |survey|}}
                 <a href="/dashboard/edit/{{id}}" class="noStyle">
                     <li class="mt-2">
                         <div>{{format_date date_created}} {{title}} LINK</div>
