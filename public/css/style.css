@@ -37,6 +37,14 @@ body {
     font-family: var(--techFont);
 }
 
+.mySurveyList {
+    color: black;
+}
+
+.mySurveyList:hover {
+    text-decoration: underline;
+}
+
 a:hover {
    text-decoration: none;
 }
