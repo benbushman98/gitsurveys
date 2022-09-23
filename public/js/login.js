@@ -1,48 +1,27 @@
-const login = async(event) => {
-    event.preventDefault();
-    
-    const email = $('#emailVal');
-    const password = $('#passwordVal');
-    
-    if (email && password) {
-      const response = await fetch('/api/user/login', {
-        method: 'POST',
-        body: JSON.stringify({
-          username: email.value,
-          password: password.value,
-        }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/');
-      } else {
-        alert('Username or Password is Incorrect. If you do not have an account, please sign up.');
-      }
-    }
-};
 
-const signUp = async (event) => {
+const login = async (event) => {
   event.preventDefault();
 
-  const name = $('#signupName').value.trim();
-  const email = $('#signupEmail').value.trim();
-  const password = $('#signupPassword').value.trim();
+  const email = document.querySelector('#emailVal').value.trim();
+  const password = document.querySelector('#passwordVal').value.trim();
 
-  if (name && email && password) {
-    const response = await fetch('/api/user', {
+  if (email && password) {
+    const response = await fetch('/api/users/login', {
       method: 'POST',
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify({
+        username: email.value,
+        password: password.value,
+      }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
       document.location.replace('/');
     } else {
-      alert('Failed to sign up.');
+      alert('Username or Password is Incorrect. If you do not have an account, please sign up.');
     }
   }
 };
-  
-$("#loginBtn").click(login);
-$("#signupBtn").click(signUp);
+
+const loginBtn = document.getElementById('loginBtn')
+loginBtn.addEventListener('submit', login);
