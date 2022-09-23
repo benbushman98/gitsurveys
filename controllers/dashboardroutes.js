@@ -1,17 +1,24 @@
 const router = require('express').Router();
 const { Survey, Question, User } = require('../models');
 const withAuth = require('../utils/auth');
+//import models
+//add withAuth
 
-router.get('/survey/:id', async (req, res) => {
+//GET DASHBOARD (NEEDS TO GET ALL SURVEYS AS WELL)
+
+router.get('/edit/:id', async (req, res) => {
   try {
-    const surveyData = await Survey.findByPk(req.params.id, {
+    const surveyData = await Survey.findByPk({
+      where: {
+        id: req.params.id,
+      },
     });
-    // const surveys = surveyData.map((survey) => survey.get({ plain: true }));
-    console.log(surveyData);
-
-    res.render('dashboard', {
-      surveyData,
-      // logged_in: true
+    if (!surveyData) {
+      res.status(404).json({ message: 'No survey found with that ID.' });
+    }
+    const survey = surveyData.get({ plain: true });
+    res.render('editsurvey', {
+      ...survey,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -19,17 +26,19 @@ router.get('/survey/:id', async (req, res) => {
 });
 
 router.get('/', async (req, res) => {
-  try{
-  const surveyData = await Survey.findAll().catch((err) => {
-    res.json(err);
-  });
-  console.log(surveyData);
-  const surveys = surveyData.map((survey) => survey.get({ plain:true }));
-  console.log(surveys);
-  res.render('dashboard', { surveys });
-} catch (err) {
-  res.status(500).json(err);
-}
+  try {
+    const surveyData = await Survey.findAll({
+      include: [{ model: Question }, { model: User }],
+    });
+    const surveys = surveyData.map((i) => i.get({ plain: true }));
+    res.render('dashboard',{
+      surveys
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
+
+//EDIT SURVEY PAGE
 
 module.exports = router;
