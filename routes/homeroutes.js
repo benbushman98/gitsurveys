@@ -42,7 +42,7 @@ router.get('/', (req, res) => {
     // console.log(allSurveysData);
 
     //↓This shows the data from the database
-      // res.status(200).json(allSurveysData);
+      // res.status(200).json(survey);
 
    
     } catch (err) {
