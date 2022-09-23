@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Survey, Question, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/survey/:id', async (req, res) => {
+router.get('/survey/:id', withAuth, async (req, res) => {
   try {
     const surveyData = await Survey.findByPk(req.params.id, {
     });
@@ -11,22 +11,28 @@ router.get('/survey/:id', async (req, res) => {
 
     res.render('dashboard', {
       surveyData,
-      // logged_in: true
+      loggedIn: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get('/', async (req, res) => {
+
+router.get('/', withAuth, async (req, res) => {
   try{
-  const surveyData = await Survey.findAll().catch((err) => {
-    res.json(err);
-  });
-  console.log(surveyData);
-  const surveys = surveyData.map((survey) => survey.get({ plain:true }));
-  console.log(surveys);
-  res.render('dashboard', { surveys });
+    //where we find all the surveys with the id of the req.session.user_id
+    const surveyData = await Survey.findAll({
+      where: {user_id: req.session.user_id}
+    }).catch((err) => {
+      res.json(err);
+    });
+    const surveys = surveyData.map((survey) => survey.get({ plain:true }));
+    console.log(surveys);
+    res.render('dashboard', { 
+      surveys,
+      loggedIn: req.session.logged_in 
+    });
 } catch (err) {
   res.status(500).json(err);
 }

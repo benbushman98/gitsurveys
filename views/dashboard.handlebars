@@ -2,7 +2,7 @@
     <div class="card-header bg-black yellowText h2">Your Surveys</div>
     <div>
         <ul>
-            {{#if survey.length}}
+            {{#if surveys.length}}
                 {{#each surveys as |survey|}}
                 <a href="/dashboard/edit/{{id}}" class="noStyle">
                     <li class="mt-2">
