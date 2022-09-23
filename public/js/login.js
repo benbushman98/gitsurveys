@@ -9,14 +9,14 @@ const login = async (event) => {
     const response = await fetch('/api/users/login', {
       method: 'POST',
       body: JSON.stringify({
-        username: email.value,
-        password: password.value,
+        email: email,
+        password: password
       }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/dashboard');
     } else {
       alert('Username or Password is Incorrect. If you do not have an account, please sign up.');
     }
@@ -24,4 +24,4 @@ const login = async (event) => {
 };
 
 const loginBtn = document.getElementById('loginBtn')
-loginBtn.addEventListener('submit', login);
+loginBtn.addEventListener('click', login);

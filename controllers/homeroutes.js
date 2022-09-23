@@ -7,14 +7,31 @@ router.get('/', (req, res) => {
   });
 
   router.get('/login', (req, res) => {
+    if (req.session.logged_in) {
+      res.redirect('/dashboard');
+      return;
+    }
+  
     res.render('login', {layout: 'main2'}) 
   });
 
+  router.get('/dashboard', (req, res) => {
+    if (!req.session.logged_in) {
+      res.redirect('/');
+      return;
+    }
+  
+    res.render('dashboard') 
+  });
+  
   router.get('/signup', (req, res) => {
+    if (req.session.logged_in) {
+      res.redirect('/dashboard');
+      return;
+    }
+  
     res.render('signup', {layout: 'main2'}) 
   });
-
-  
   
   // We want to get the survey id to be pulled up automatically
   router.get('/survey/:id', async (req, res) => {

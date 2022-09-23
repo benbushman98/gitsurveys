@@ -13,7 +13,7 @@ const signUp = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/dashboard');
     } else {
       alert('Failed to sign up.');
     }
@@ -21,4 +21,4 @@ const signUp = async (event) => {
 };
 
 const signupBtn = document.getElementById('signupBtn')
-signupBtn.addEventListener('submit', signUp);
+signupBtn.addEventListener('click', signUp);
