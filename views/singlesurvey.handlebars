@@ -3,8 +3,15 @@
     <table class="table bg-white p-5">
         <thead class="thead bg-white">
             <tr class="h2 techFont pb-0">
+                {{!-- TITLE/DATE CREATED/CREATER NAME --}}
+            <th scope="col">{{title}}, Created on: {{format_date date_created}} by {{name}}</th>
+            <th scope="col"></th>
+            </tr>
+        </thead>
+        <thead class="thead bg-white">
+            <tr class="h2 techFont pb-0">
                 {{!-- QUESTION --}}
-            <th scope="col">Question Here {{survey.question}}</th>
+            <th scope="col">{{question_body}}</th>
             <th scope="col">Results</th>
             </tr>
         </thead>
@@ -15,7 +22,7 @@
                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                     <label class="form-check-label" for="exampleRadios1">
                         {{!-- OPTION 1 --}}
-                        Option 1 {{survey.option1}} 
+                        {{}}
                     </label>
                 </div>
             </th>
@@ -32,7 +39,7 @@
                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
                     <label class="form-check-label" for="exampleRadios1">
                         {{!-- OPTION 2 --}}
-                        Option 2 {{survey.option2}} 
+                        {{}}
                     </label>
                 </div>
             </th>
@@ -49,7 +56,7 @@
                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" checked>
                     <label class="form-check-label" for="exampleRadios3">
                         {{!-- OPTION 3 --}}
-                        Option 3 {{survey.option3}} 
+                        {{}}
                     </label>
                 </div>
             </th>
@@ -66,7 +73,7 @@
                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4" checked>
                     <label class="form-check-label" for="exampleRadios4">
                         {{!-- OPTION 4 --}}
-                        Option 4 {{survey.option4}} 
+                        {{}}
                     </label>
                 </div>
             </th>
