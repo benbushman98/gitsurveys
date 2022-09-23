@@ -3,7 +3,7 @@ const userRoutes = require('./userRoutes');
 const surveyRoutes = require('./surveyRoutes');
 const questionRoutes = require ('./questionRoutes')
 
-router.use('/user', userRoutes);
+router.use('/users', userRoutes);
 router.use('/survey', surveyRoutes);
 router.use('/question', questionRoutes);
 
