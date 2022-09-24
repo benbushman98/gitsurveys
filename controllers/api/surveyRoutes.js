@@ -1,10 +1,17 @@
 const router = require('express').Router();
-const { Survey } = require('../../models');
+const { Survey } = require('../../models/Survey');
 
-router.post('/', async (req, res) => {
+router.post('/survey', async (req, res) => {
   try {
     const newSurvey = await Survey.create({
-      ...req.body,
+      // ...req.body,
+      // user_id: req.session.user_id,
+      title: req.body.title,
+      question: req.body.question,
+      option1: req.body.option1,
+      option2: req.body.option2,
+      option3: req.body.option3,
+      option4: req.body.option4,
       user_id: req.session.user_id,
     });
 

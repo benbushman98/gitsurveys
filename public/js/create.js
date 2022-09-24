@@ -19,8 +19,8 @@ function showEditForm(event) {
 //     const option2 = document.querySelector('#option2').value;
 //     const option3 = document.querySelector('#option3').value;
 //     const option4 = document.querySelector('#option4').value;
-  
-//     const response = await fetch('/api/post', {
+  //the endpoint used to be api/post on line 23 
+//     const response = await fetch('/api/survey', {
 //       method: 'POST',
 //       body: JSON.stringify({
 //         title: title,
@@ -44,5 +44,5 @@ function showEditForm(event) {
 //     }
 //   }
   
-// document.querySelector('.newSurveyForm').addEventListener('submit', newSurvey);
+document.querySelector('.newSurveyForm').addEventListener('submit', newSurvey);
 createBtn.addEventListener('click', showEditForm)

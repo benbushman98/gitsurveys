@@ -3,7 +3,7 @@ const { User, Survey, Question } = require('../models');
 
 const userData = require('./userData.json');
 const surveyData = require('./surveyData.json');
-const questionData = require('./questionData.json')
+// const questionData = require('./questionData.json')
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -19,13 +19,13 @@ const seedDatabase = async () => {
       // user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
-  for (const question of questionData) {
-    await Question.create({    
-      ...question
-    });
-  }
+  // for (const question of questionData) {
+  //   await Question.create({    
+  //     ...question
+  //   });
+  // }
 
-  //We still need to work with the questionData and revise the .json files in this folder
+  
   
   process.exit(0);
 };
