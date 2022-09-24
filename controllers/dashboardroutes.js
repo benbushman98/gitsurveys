@@ -1,9 +1,8 @@
 const router = require('express').Router();
-const { Survey, Question, User } = require('../models');
+const { Survey } = require('../models');
 const withAuth = require('../utils/auth');
-//import models
-//add withAuth
 
+//GET A SINGLE SURVEY - NOT SURE IF THIS WORKS YET
 router.get('/survey/:id', withAuth, async (req, res) => {
   try {
     const surveyData = await Survey.findByPk({
@@ -26,7 +25,7 @@ router.get('/survey/:id', withAuth, async (req, res) => {
 });
 
 
-
+//DASHBOARD PAGE & ALL SURVEYS BELONGING TO THE USER - NOT SURE IF THIS WORKS YET
 router.get('/', withAuth, async (req, res) => {
   try{
     //where we find all the surveys with the id of the req.session.user_id
@@ -45,7 +44,5 @@ router.get('/', withAuth, async (req, res) => {
   res.status(500).json(err);
 }
 });
-
-
 
 module.exports = router;

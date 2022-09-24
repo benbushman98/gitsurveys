@@ -1,3 +1,5 @@
+//THIS WORKS ✔️✔️
+
 const login = async (event) => {
   event.preventDefault();
 
@@ -15,7 +17,7 @@ const login = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/dashboard');
     } else {
       alert('Username or Password is Incorrect. If you do not have an account, please sign up.');
     }

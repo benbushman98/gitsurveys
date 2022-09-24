@@ -1,3 +1,5 @@
+//THIS WORKS ✔️✔️
+
 const signUp = async (event) => {
   event.preventDefault();
 
