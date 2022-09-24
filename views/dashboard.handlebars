@@ -3,9 +3,7 @@
     <div class="card-header bg-black yellowText h2">Your Surveys</div>
     <div>
         <ul>
-
-            {{!-- WE CAN UNCOMMENT {{#IF}} ONCE WE ARE ABLE TO CREATE A NEW SURVEY & ADD IT TO THE DATABASE --}}
-            {{!-- {{#if surveys.length}}  --}}
+            {{#if surveys.length}} 
                 {{#each surveys as |survey|}}
                 <a href="/survey/{{id}}" class="noStyle">
                     <li class="mySurveyList mt-2">
@@ -13,9 +11,9 @@
                     </li>
                 </a>
                 {{/each}}
-            {{!-- {{else}}
+            {{else}}
             <p class="font-italic mt-2">You have no surveys at this time.</p>
-            {{/if}} --}}
+            {{/if}}
         </ul>
     </div>
 </section>

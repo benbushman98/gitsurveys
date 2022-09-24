@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Survey } = require('../../models');
 
+// ADD/CREATE/POST A NEW SURVEY- NOT SURE IF THIS WORKS YET
 router.post('/', async (req, res) => {
   try {
     const newSurvey = await Survey.create({
@@ -14,6 +15,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// DELETE A SURVEY - NOT SURE IF THIS WORKS YET
 router.delete('/:id', async (req, res) => {
   try {
     const surveyData = await Survey.destroy({

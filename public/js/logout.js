@@ -1,3 +1,5 @@
+//THIS WORKS ✔️✔️
+
 const logout = async () => {
     const response = await fetch('/api/users/logout', {
       method: 'POST',
@@ -6,10 +8,11 @@ const logout = async () => {
     
     if (response.ok) {
       document.location.replace('/');
+      alert('Thanks for visiting!');
     } else {
-      alert('Failed to logout. Please try again.');
+      alert('You are not logged in.');
     }
   };
 
-const logoutBtn = document.getElementById('logout')
+const logoutBtn = document.getElementById('logout');
 logoutBtn.addEventListener('click', logout);
