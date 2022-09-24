@@ -1,22 +1,30 @@
 const router = require('express').Router();
 const { Survey, Question, User } = require('../models');
 const withAuth = require('../utils/auth');
+//import models
+//add withAuth
 
 router.get('/survey/:id', withAuth, async (req, res) => {
   try {
-    const surveyData = await Survey.findByPk(req.params.id, {
+    const surveyData = await Survey.findByPk({
+      where: {
+        id: req.params.id,
+      },
     });
+
     // const surveys = surveyData.map((survey) => survey.get({ plain: true }));
     console.log(surveyData);
 
     res.render('dashboard', {
       surveyData,
       loggedIn: req.session.logged_in
+
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
 
 
 router.get('/', withAuth, async (req, res) => {
@@ -37,5 +45,7 @@ router.get('/', withAuth, async (req, res) => {
   res.status(500).json(err);
 }
 });
+
+
 
 module.exports = router;
