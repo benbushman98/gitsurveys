@@ -1,43 +1,83 @@
 [
   {
     "title": "Food Survey",
+    "question": "What is your favorite type of food?",
+    "option1": "Mexican Food",
+    "option2": "American Food",
+    "option3": "Japanese Food",
+    "option4": "French Food",
     "user_id": 1
   },
   {
     "title": "Language Survey",
-    "date_created": "2021-01-17 06:13:12",
+    "question": "What language do you think is easier to learn?",
+    "option1": "Spanish",
+    "option2": "English",
+    "option3": "Chinese",
+    "option4": "German",
     "user_id": 2
   },
   {
     "title": "Nationality Survey",
-    "date_created": "2000-02-13 04:33:12",
+    "question": "What is your country of origin?",
+    "option1": "Jamaica",
+    "option2": "Spain",
+    "option3": "USA",
+    "option4": "Mexico",
     "user_id": 3
   },
   {
     "title": "The Best 90's Band",
-    "date_created": "2024-02-13 04:33:12",
+    "question": "What is your favorite type of food?",
+    "option1": "The Backstreet Boys",
+    "option2": "Nirvana",
+    "option3": "Red Hot Chili Peppers",
+    "option4": "Green Day",
     "user_id": 4
   },
   {
     "title": "The Best Ice Cream",
-    "date_created":  "2024-02-13 04:33:12",
+    "question": "What is the best ice cream flavor?",
+    "option1": "Mint Chocolate Chip",
+    "option2": "Pistachio",
+    "option3": "Vanilla",
+    "option4": "Strawberry",
     "user_id": 5
   },
   {
     "title": "The Basketball GOAT",
-    "date_created":  "1998-02-13 04:33:12",
+    "question": "Who is the NBA GOAT ?",
+    "option1": "Magic Johnson",
+    "option2": "LeBron James",
+    "option3": "Michael Jordan",
+    "option4": "Karl Malone",
     "user_id": 4
   },
   {
     "title": "The Best Olympic Event",
+    "question": "What is the best Olympic event?",
+    "option1": "Swimming",
+    "option2": "Gymnastics",
+    "option3": "Track",
+    "option4": "Weightlifting",
     "user_id": 4
   },
   {
     "title": "The Best Pet",
-    "User_id": 4
+    "question": "What is your favorite type of pet?",
+    "option1": "Rabbit",
+    "option2": "Horse",
+    "option3": "Reptile",
+    "option4": "Dog",
+    "user_id": 4
   },
   {
-    "title": "Most Comfortable Running Shoe ",
-    "User_id": 6
+    "title": "Most Comfortable Running Shoe Brand ",
+    "question": "What is the most comfortable running shoes brand?",
+    "option1": "Adidas",
+    "option2": "Nike",
+    "option3": "New Balance",
+    "option4": "Sketchers",
+    "user_id": 6
   }
 ]

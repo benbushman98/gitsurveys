@@ -15,10 +15,26 @@ Survey.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
+    date_created:{
+      type:DataTypes.DATE,
+      allowNull:false,
       defaultValue: DataTypes.NOW,
+    },
+    question: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    option1: {
+      type: DataTypes.STRING,
+    },
+    option2: {
+      type: DataTypes.STRING,
+    },
+    option3: {
+      type: DataTypes.STRING,
+    },
+    option4: {
+      type: DataTypes.STRING,
     },
     user_id: {
       type: DataTypes.INTEGER,
