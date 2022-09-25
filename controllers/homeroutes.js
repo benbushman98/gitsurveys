@@ -7,13 +7,13 @@ router.get('/', async (req, res) => {
     res.json(err);
   });
   const surveys = surveyData.map((survey) => survey.get({ plain: true }));
-    res.render('homepage', { surveys });
+    res.render('homepage', { surveys, loggedIn: req.session.loggedIn });
 });
 
 //GET LOGIN PAGE - THIS WORKS ✔️✔️
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect('dashboard');
     return;
   }
   res.render('login', {layout: 'main2'}) 
@@ -28,14 +28,6 @@ router.get('/signup', (req, res) => {
   res.render('signup', {layout: 'main2'}) 
 });
 
-//GET DASHBOARD PAGE - NOTE: HAVING A ROUTE TO THE DASHBOARD IN THE HOMEROUTES FILE MESSED UP MY HOMEWORK DOWN THE LINE. WE CAN UNCOMMENT IT OUT AT THE END IF IT DOESN'T BREAK STUFF.
-// router.get('/dashboard', (req, res) => {
-//   if (!req.session.logged_in) {
-//     res.redirect('/');
-//     return;
-//   }
-//   res.render('dashboard') 
-// });
 
 //GET SINGLE SURVEY PAGE - THIS IS WORKING NOW!!
 router.get('/survey/:id', async (req, res) => {

@@ -1,9 +1,9 @@
-<section class="card topMargin mb-4 mx-4">
+<div class="container">
+<section class="card topMargin mb-5">
     <div class="card-header bg-black yellowText h2">Your Surveys</div>
     <div>
         <ul>
-            {{!-- WE CAN UNCOMMENT {{#IF}} ONCE WE ARE ABLE TO CREATE A NEW SURVEY & ADD IT TO THE DATABASE --}}
-            {{!-- {{#if survey.length}} --}} 
+            {{#if surveys.length}} 
                 {{#each surveys as |survey|}}
                 <a href="/survey/{{id}}" class="noStyle">
                     <li class="mySurveyList mt-2">
@@ -11,14 +11,15 @@
                     </li>
                 </a>
                 {{/each}}
-            {{!-- {{else}}
+            {{else}}
             <p class="font-italic mt-2">You have no surveys at this time.</p>
-            {{/if}} --}}
+            {{/if}}
         </ul>
     </div>
 </section>
 
-<section class="card mx-4 mb-5 hide" id="surveyForm">
+
+<section class="card mb-5 hide" id="surveyForm">
     <div class="card-header bg-black yellowText">Create New Survey</div>
     <div class="card-body">
         <form class="newSurveyForm">
@@ -50,7 +51,7 @@
         </form>
     </div>
 </section>
-
+</div>
 <div class="text-center mt-3">
     <button type="button" class="btn custom-loginbtn mx-auto" style="width: 200px;" id="createBtn">+ Create Survey</button> 
 </div>

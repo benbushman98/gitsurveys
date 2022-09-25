@@ -1,3 +1,5 @@
+//IF WE CHANGE OUR MODELS TO USER AND SURVEY THEN WE CAN DELETE THIS FILE
+
 const router = require('express').Router();
 const { Question } = require('../../models');
 
