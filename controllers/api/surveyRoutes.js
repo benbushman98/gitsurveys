@@ -1,12 +1,11 @@
 const router = require('express').Router();
-const { Survey } = require('../../models/Survey');
+const { Survey } = require('../../models/'); //changed from '../../models/survey'
+const withAuth = require('../../utils/auth');
 
-// ADD/CREATE/POST A NEW SURVEY- NOT SURE IF THIS WORKS YET
-router.post('/', async (req, res) => {
+// POST A NEW SURVEY - THIS WORKS ✔️✔️
+router.post('/', withAuth, async (req, res) => {
   try {
     const newSurvey = await Survey.create({
-      // ...req.body,
-      // user_id: req.session.user_id,
       title: req.body.title,
       question: req.body.question,
       option1: req.body.option1,
@@ -22,8 +21,8 @@ router.post('/', async (req, res) => {
   }
 });
 
-// DELETE A SURVEY - NOT SURE IF THIS WORKS YET
-router.delete('/:id', async (req, res) => {
+// DELETE A SURVEY - NEED HELP GETTING THIS WORKING ❌
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const surveyData = await Survey.destroy({
       where: {

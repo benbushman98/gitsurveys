@@ -15,7 +15,6 @@ async function newSurvey(event) {
     const option2 = document.querySelector('#option2').value;
     const option3 = document.querySelector('#option3').value;
     const option4 = document.querySelector('#option4').value;
-  // the endpoint used to be api/post on line 23 
     const response = await fetch('/api/survey', {
       method: 'POST',
       body: JSON.stringify({
