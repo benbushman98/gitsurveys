@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
     res.json(err);
   });
   const surveys = surveyData.map((survey) => survey.get({ plain: true }));
-    res.render('homepage', { surveys, loggedIn: req.session.loggedIn });
+    res.render('homepage', { surveys, loggedIn: req.session.logged_in });
 });
 
 //GET LOGIN PAGE - THIS WORKS ✔️✔️
@@ -29,7 +29,7 @@ router.get('/signup', (req, res) => {
 });
 
 
-//GET SINGLE SURVEY PAGE - THIS IS WORKING NOW!!
+//GET SINGLE SURVEY PAGE - THIS WORKS ✔️✔️
 router.get('/survey/:id', async (req, res) => {
   try{
     const surveyData = await Survey.findOne(
@@ -51,13 +51,10 @@ router.get('/survey/:id', async (req, res) => {
     }
 
     const survey =  surveyData.get({ plain:true });
-    // console.log(req.session.name)
     console.log(survey.option1)
     res.render('singlesurvey', { survey, option1: survey.option1, option2: survey.option2, option3: survey.option3,
       option4: survey.option4, date: survey.date_created, name: survey.user.name, logged_in: req.session.logged_in } );
 
-  //↓This shows the data from the database
-    // res.status(200).json(surveyData);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
