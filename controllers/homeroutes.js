@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {Survey, Question, User} = require('../models');
+const {Survey, User} = require('../models');
 
 //GET HOME PAGE & ALL SURVEYS - THIS WORKS ✔️✔️
 router.get('/', async (req, res) => {
