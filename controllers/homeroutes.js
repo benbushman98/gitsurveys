@@ -37,18 +37,15 @@ router.get('/signup', (req, res) => {
 //   res.render('dashboard') 
 // });
 
-//GET SINGLE SURVEY PAGE - THIS DOES NOT WORK ❌❌
+//GET SINGLE SURVEY PAGE - THIS IS WORKING NOW!!
 router.get('/survey/:id', async (req, res) => {
   try{
-    const surveyData = await Survey.findbyPk(req.params.id, {
-      include: [
-        {
-          model: Question,
-          attributes: [
-            'id',
-            'question_body',
-          ],
+    const surveyData = await Survey.findOne(
+      {
+        where: {
+          id: req.params.id,
         },
+      include: [
         {
           model: User,
           attributes: ['name'],
@@ -62,7 +59,10 @@ router.get('/survey/:id', async (req, res) => {
     }
 
     const survey =  surveyData.get({ plain:true });
-    res.render('singlesurvey', { survey, logged_in: req.session.logged_in } );
+    // console.log(req.session.name)
+    console.log(survey.option1)
+    res.render('singlesurvey', { survey, option1: survey.option1, option2: survey.option2, option3: survey.option3,
+      option4: survey.option4, date: survey.date_created, name: survey.user.name, logged_in: req.session.logged_in } );
 
   //↓This shows the data from the database
     // res.status(200).json(surveyData);
