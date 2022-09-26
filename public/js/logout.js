@@ -7,10 +7,13 @@ const logout = async () => {
     });
     
     if (response.ok) {
-      document.location.replace('/');
-      alert('Thanks for visiting!');
-    } else {
-      alert('You are not logged in.');
+
+      $(document).ready(function () {
+        // Handler for .ready() called.
+        window.setTimeout(function () {
+            location.href = "/";
+        }, 1500);
+    });
     }
   };
 
