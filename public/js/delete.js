@@ -1,10 +1,9 @@
-// NOT WORKING ❌❌
+//THIS WORKS ✔️✔️
+
 async function deleteHandler(event) {
     event.preventDefault();
 
-    const id = window.location.toString().split('/')[
-        window.location.toString().split('/').length -1
-    ];
+    const id = document.querySelector('#surveyID').innerHTML;
 
     const response = await fetch(`/api/survey/${id}`, {
         method: 'DELETE'
