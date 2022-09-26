@@ -17,8 +17,9 @@ GitSurveys is for people longing to have a better understanding of how others th
 - Have several question types
 - Ask more than one question per survey
 
+## Deployed Link
+GitSurveys.com???
+
 ## Application Appearance
 
 ![GitSurveys](./public/images/screenshot.png)
-
-## Deployed Link
