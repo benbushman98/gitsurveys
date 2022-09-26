@@ -21,7 +21,7 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-// DELETE A SURVEY - NEED HELP GETTING THIS WORKING ❌
+// DELETE A SURVEY - THIS WORKS ✔️✔️
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const surveyData = await Survey.destroy({

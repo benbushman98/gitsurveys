@@ -3,7 +3,7 @@
 async function deleteHandler(event) {
     event.preventDefault();
 
-    const id = document.querySelector('#surveyID').innerHTML;
+    const id = document.querySelector('.surveyID').innerHTML;
 
     const response = await fetch(`/api/survey/${id}`, {
         method: 'DELETE'

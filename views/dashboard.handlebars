@@ -1,13 +1,14 @@
+{{!-- YOUR SURVEY LIST WITH DELETE BUTTON --}}
 <div class="container">
 <section class="card topMargin mb-5">
-    <div class="card-header bg-black yellowText h2">Your Surveys</div>
+    <div class="card-header bg-black yellowText techFont h2">Your Surveys</div>
     <div>
         <ul>
             {{#if surveys.length}} 
                 {{#each surveys as |survey|}}
                 <a href="/survey/{{id}}">
-                    <li class="mySurveyList my-2 d-flex">
-                        <div class="d-inline m-2">#</div><div class="d-inline m-2" id="surveyID">{{id}}</div><div class="d-inline m-2">{{format_date date_created}}: "{{title}}"</div><button class="btn custom-btn d-inline ml-auto m-1" id="deleteBtn">Delete</button>
+                    <li class="row mySurveyList my-2 d-flex">
+                        <div class="d-inline m-2">#</div><div class="d-inline m-2 surveyID">{{id}}</div><div class="d-inline m-2">{{format_date date_created}}: "{{title}}"</div><button class="btn custom-btn d-inline ml-auto m-1" id="deleteBtn">Delete</button>
                     </li>
                 </a>
                 {{/each}}
@@ -18,7 +19,7 @@
     </div>
 </section>
 
-
+{{!-- CREATE A NEW SURVEY FORM --}}
 <section class="card mb-5 hide" id="surveyForm">
     <div class="card-header bg-black yellowText">Create New Survey</div>
     <div class="card-body">
