@@ -24,7 +24,6 @@ router.get('/survey/:id', withAuth, async (req, res) => {
 //DASHBOARD PAGE & ALL SURVEYS BELONGING TO THE USER - THIS WORKS ✔️✔️
 router.get('/', withAuth, async (req, res) => {
   try{
-    //where we find all the surveys with the id of the req.session.user_id
     const surveyData = await Survey.findAll({
       where: {user_id: req.session.user_id}
     }).catch((err) => {

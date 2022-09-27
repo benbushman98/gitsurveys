@@ -13,12 +13,13 @@ GitSurveys is for people longing to have a better understanding of how others th
 - Protects API keys and sensitive information with environment variables
 
 ## Future Development
+- Calculate & render results
 - Be able to edit surveys for typos
 - Have several question types
 - Ask more than one question per survey
 
 ## Deployed Link
-GitSurveys.com???
+www.gitsurveys.com
 
 ## Application Appearance
 

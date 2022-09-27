@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Survey } = require('../../models/'); //changed from '../../models/survey'
+const { Survey } = require('../../models/');
 const withAuth = require('../../utils/auth');
 
 // POST A NEW SURVEY - THIS WORKS ✔️✔️
@@ -22,7 +22,7 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 
-// DELETE A SURVEY - WORKING ON THIS - ONLY WORKS FOR FIRST SURVEY IN THE LIST ❌
+// DELETE A SURVEY - THIS WORKS ✔️✔️
 router.delete('/:id', withAuth, async (req, res) => { 
   try {
     const surveyData = await Survey.destroy({ 

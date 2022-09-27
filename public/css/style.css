@@ -52,6 +52,10 @@ body {
    text-decoration: none;
 }
 
+.surveyBubble:hover {
+    text-decoration: none;
+}
+
 /* BUTTONS */
 .custom-btn {
     background-color: var(--black);
