@@ -6,11 +6,12 @@
         <ul>
             {{#if surveys.length}} 
                 {{#each surveys as |survey|}}
-                <a href="/survey/{{id}}"> 
-                    <li class="row mySurveyList my-2 d-flex">
-                        <div class="d-inline m-2">#</div><div class="d-inline m-2 surveyID">{{id}}</div><div class="d-inline m-2">{{format_date date_created}}: "{{title}}"</div><button class="btn custom-btn d-inline ml-auto m-1 deleteBtn">Delete</button>
-                    </li>
-                </a>
+                <li class="row my-2 mySurveyList">
+                    <a href="/survey/{{id}}"> 
+                        <div class="m-2">{{format_date date_created}}: "{{title}}"</div>
+                    </a>
+                    <button class="btn custom-btn d-inline ml-auto m-1 deleteBtn" data-id="{{id}}">Delete</button>
+                </li>
                 {{/each}}
             {{else}}
             <p class="font-italic mt-2">You have no surveys at this time.</p>

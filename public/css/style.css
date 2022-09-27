@@ -38,17 +38,17 @@ body {
 }
 
 .mySurveyList {
-    color: var(--black);
     font-size: 20px;
     margin-right: 40px;
     border-bottom: 1px solid var(--yellow);
 }
 
-.mySurveyList:hover {
-   color: var(--yellow);
+a {
+    color: var(--black);
 }
 
 a:hover {
+   color: var(--yellow);
    text-decoration: none;
 }
 
