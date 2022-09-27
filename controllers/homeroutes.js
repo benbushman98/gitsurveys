@@ -53,7 +53,7 @@ router.get('/survey/:id', async (req, res) => {
     const survey =  surveyData.get({ plain:true });
     console.log(survey.option1)
     res.render('singlesurvey', { survey, option1: survey.option1, option2: survey.option2, option3: survey.option3,
-      option4: survey.option4, date: survey.date_created, name: survey.user.name, logged_in: req.session.logged_in } );
+      option4: survey.option4, date: survey.date_created, name: survey.user.name, logged_in: req.session.logged_in, layout: 'main2' } );
 
   } catch (err) {
     console.log(err);
