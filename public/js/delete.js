@@ -1,10 +1,9 @@
-// NOT WORKING ❌❌
+//DELETE A SURVEY - THIS WORKS ✔️✔️
+
 async function deleteHandler(event) {
     event.preventDefault();
 
-    const id = window.location.toString().split('/')[
-        window.location.toString().split('/').length -1
-    ];
+    const id = event.target.dataset.id;
 
     const response = await fetch(`/api/survey/${id}`, {
         method: 'DELETE'
@@ -16,5 +15,9 @@ async function deleteHandler(event) {
         alert(response.statusText);
     };
 };
-  
-document.querySelector('#deleteBtn').addEventListener('click', deleteHandler); 
+const deleteBtnEl = document.getElementsByClassName('deleteBtn');
+
+for(let i = 0; i < deleteBtnEl.length; i++) {
+    const element = deleteBtnEl[i];
+    element.addEventListener('click', deleteHandler);
+}

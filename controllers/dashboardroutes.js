@@ -2,22 +2,18 @@ const router = require('express').Router();
 const { Survey } = require('../models');
 const withAuth = require('../utils/auth');
 
-//GET A SINGLE SURVEY - THIS WORKS ✔️✔️
+//GET A SINGLE SURVEY - THIS WORKS ✔️✔️ 
 router.get('/survey/:id', withAuth, async (req, res) => {
   try {
     const surveyData = await Survey.findByPk({
       where: {
         id: req.params.id,
-      },
+      }
     });
-
-    // const surveys = surveyData.map((survey) => survey.get({ plain: true }));
     console.log(surveyData);
-
-    res.render('dashboard', {
+    res.render('dashboard', { 
       surveyData,
       loggedIn: req.session.logged_in
-
     });
   } catch (err) {
     res.status(500).json(err);
