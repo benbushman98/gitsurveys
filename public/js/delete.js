@@ -1,15 +1,13 @@
-//DELETE A SURVEY - WORKING ON THIS - ONLY WORKS FOR FIRST SURVEY IN THE LIST ❌
+//DELETE A SURVEY - THIS WORKS ✔️✔️
 
 async function deleteHandler(event) {
     event.preventDefault();
 
-    const id = document.querySelector('.surveyID').innerHTML;
+    const id = event.target.dataset.id;
 
     const response = await fetch(`/api/survey/${id}`, {
         method: 'DELETE'
     });
-    
-    console.log(id);
 
     if (response.ok) {
         document.location.replace('/dashboard');
@@ -17,5 +15,9 @@ async function deleteHandler(event) {
         alert(response.statusText);
     };
 };
-  
-document.querySelector('.deleteBtn').addEventListener('click', deleteHandler); 
+const deleteBtnEl = document.getElementsByClassName('deleteBtn');
+
+for(let i = 0; i < deleteBtnEl.length; i++) {
+    const element = deleteBtnEl[i];
+    element.addEventListener('click', deleteHandler);
+}
