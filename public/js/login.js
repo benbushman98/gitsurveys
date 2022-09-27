@@ -23,7 +23,6 @@ const login = async (event) => {
       function myFunction() {
         document.getElementById("myCheck").click();
       }
-      // alert('Username or Password is Incorrect. If you do not have an account, please sign up.');
     }
   }
 };
