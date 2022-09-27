@@ -30,35 +30,35 @@ router.get('/signup', (req, res) => {
 
 
 //GET SINGLE SURVEY PAGE - THIS WORKS ✔️✔️ MAYBE DON'T NEED THIS
-// router.get('/survey/:id', async (req, res) => {
-//   try{
-//     const surveyData = await Survey.findOne(
-//       {
-//         where: {
-//           id: req.params.id,
-//         },
-//       include: [
-//         {
-//           model: User,
-//           attributes: ['name'],
-//         },
-//       ],
-//     });
+router.get('/survey/:id', async (req, res) => {
+  try{
+    const surveyData = await Survey.findOne(
+      {
+        where: {
+          id: req.params.id,
+        },
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
 
-//     if (!surveyData) {
-//       res.status(404).json({ message: 'Post ID not found' });
-//       return;
-//     }
+    if (!surveyData) {
+      res.status(404).json({ message: 'Post ID not found' });
+      return;
+    }
 
-//     const survey =  surveyData.get({ plain:true });
-//     console.log(survey.option1)
-//     res.render('singlesurvey', { survey, option1: survey.option1, option2: survey.option2, option3: survey.option3,
-//       option4: survey.option4, date: survey.date_created, name: survey.user.name, logged_in: req.session.logged_in } );
+    const survey =  surveyData.get({ plain:true });
+    console.log(survey.option1)
+    res.render('singlesurvey', { survey, option1: survey.option1, option2: survey.option2, option3: survey.option3,
+      option4: survey.option4, date: survey.date_created, name: survey.user.name, logged_in: req.session.logged_in } );
 
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// })
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+})
 
 module.exports = router;
