@@ -19,7 +19,11 @@ const login = async (event) => {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert('Username or Password is Incorrect. If you do not have an account, please sign up.');
+      myFunction();
+      function myFunction() {
+        document.getElementById("myCheck").click();
+      }
+      // alert('Username or Password is Incorrect. If you do not have an account, please sign up.');
     }
   }
 };
