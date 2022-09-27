@@ -1,4 +1,4 @@
-//THIS WORKS ✔️✔️
+//DELETE A SURVEY - WORKING ON THIS - ONLY WORKS FOR FIRST SURVEY IN THE LIST ❌
 
 async function deleteHandler(event) {
     event.preventDefault();
@@ -8,6 +8,8 @@ async function deleteHandler(event) {
     const response = await fetch(`/api/survey/${id}`, {
         method: 'DELETE'
     });
+    
+    console.log(id);
 
     if (response.ok) {
         document.location.replace('/dashboard');
@@ -16,4 +18,4 @@ async function deleteHandler(event) {
     };
 };
   
-document.querySelector('#deleteBtn').addEventListener('click', deleteHandler); 
+document.querySelector('.deleteBtn').addEventListener('click', deleteHandler); 

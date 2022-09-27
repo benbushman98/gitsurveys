@@ -21,10 +21,11 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-// DELETE A SURVEY - THIS WORKS ✔️✔️
-router.delete('/:id', withAuth, async (req, res) => {
+
+// DELETE A SURVEY - WORKING ON THIS - ONLY WORKS FOR FIRST SURVEY IN THE LIST ❌
+router.delete('/:id', withAuth, async (req, res) => { 
   try {
-    const surveyData = await Survey.destroy({
+    const surveyData = await Survey.destroy({ 
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
@@ -35,7 +36,7 @@ router.delete('/:id', withAuth, async (req, res) => {
       res.status(404).json({ message: 'No survey found with this id!' });
       return;
     }
-
+    
     res.status(200).json(surveyData);
   } catch (err) {
     res.status(500).json(err);
