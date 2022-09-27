@@ -6,9 +6,9 @@
         <ul>
             {{#if surveys.length}} 
                 {{#each surveys as |survey|}}
-                <a href="/survey/{{id}}">
+                <a href="/survey/{{id}}"> 
                     <li class="row mySurveyList my-2 d-flex">
-                        <div class="d-inline m-2">#</div><div class="d-inline m-2 surveyID">{{id}}</div><div class="d-inline m-2">{{format_date date_created}}: "{{title}}"</div><button class="btn custom-btn d-inline ml-auto m-1" id="deleteBtn">Delete</button>
+                        <div class="d-inline m-2">#</div><div class="d-inline m-2 surveyID">{{id}}</div><div class="d-inline m-2">{{format_date date_created}}: "{{title}}"</div><button class="btn custom-btn d-inline ml-auto m-1 deleteBtn">Delete</button>
                     </li>
                 </a>
                 {{/each}}
@@ -21,7 +21,7 @@
 
 {{!-- CREATE A NEW SURVEY FORM --}}
 <section class="card mb-5 hide" id="surveyForm">
-    <div class="card-header bg-black yellowText">Create New Survey</div>
+    <div class="card-header bg-black yellowText techFont">Create New Survey</div>
     <div class="card-body">
         <form class="newSurveyForm">
             <div>
