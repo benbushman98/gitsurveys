@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link id="css-light-switch" rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
@@ -36,6 +36,9 @@
           <a class="navbar-brand mr-1 title" href="/">Git Surveys</a>
         </li>
       </ul>
+          <input type="checkbox" id="toggle" class="toggle">
+  <label for="toggle"> </label>
+
         {{#if loggedIn}}
         <a class="a btn custom-btn mx-2 my-2 my-sm-0" href="/dashboard">Dashboard</a>
         <button class="btn custom-btn text-light mx-2 my-2 my-sm-0" role="button" id="logout" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Logout</button>
@@ -45,8 +48,8 @@
         {{/if}}
     </div>
   </nav>
-
   <main>
+
     <!-- HOMEPAGE.HANDLEBARS -->
     {{{body}}}
 
@@ -72,6 +75,10 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    
+  </script>
 
 {{#if loggedIn}}
   <script src="/js/logout.js"></script>
