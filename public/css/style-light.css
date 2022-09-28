@@ -1,7 +1,7 @@
 :root {
     --yellow: #ffc107;
-    --black: black;
-    --white: white;
+    --black: white;
+    --white: hsl(0, 0%, 29%);
     --techFont:'Quantico', sans-serif;
 }
 
@@ -12,7 +12,7 @@ html {
 body {
     height: 100%;
     margin: 0;
-    background-color: var(--white);
+    background-color: var(--black);
 }
 
 /* TOGGLE */
@@ -103,6 +103,14 @@ input[type="checkbox"].toggle {
     color: var(--white);
 }
 
+.blackText {
+    color: var(--black);
+}
+
+.stayBlack {
+    color: var(--white);
+}
+
 .techFont {
     font-family: var(--techFont);
 }
@@ -111,6 +119,10 @@ input[type="checkbox"].toggle {
     font-size: 20px;
     margin-right: 40px;
     border-bottom: 1px solid var(--yellow);
+}
+
+.text-white {
+    color: var(--white);
 }
 
 .a {
@@ -128,8 +140,8 @@ input[type="checkbox"].toggle {
 
 /* BUTTONS */
 .custom-btn {
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--black);
 }
 
 .custom-btn:hover {
@@ -199,5 +211,11 @@ nav li:hover {
         margin-top: 85px;
         justify-content: center;
         font-size: 60px;
+    } 
+}
+
+@media only screen and (max-width: 991px) {
+    .hideLogo {
+        display: none;
     } 
 }

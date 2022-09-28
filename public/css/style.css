@@ -103,6 +103,10 @@ input[type="checkbox"].toggle {
     color: var(--white);
 }
 
+.blackText {
+    color: var(--black);
+}
+
 .techFont {
     font-family: var(--techFont);
 }
