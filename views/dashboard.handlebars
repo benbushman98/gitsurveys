@@ -8,7 +8,7 @@
                 {{#each surveys as |survey|}}
                 <li class="row my-2 mySurveyList">
                     <a class="a" href="/survey/{{id}}"> 
-                        <div class="m-2">{{format_date date_created}}: "{{title}}"</div>
+                        <div class="m-2"><p class="stayBlack">{{format_date date_created}}: "{{title}}"</p></div>
                     </a>
                     <button class="btn custom-btn d-inline ml-auto m-1 deleteBtn" data-id="{{id}}">Delete</button>
                 </li>

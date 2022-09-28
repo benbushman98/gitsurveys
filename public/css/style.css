@@ -103,6 +103,10 @@ input[type="checkbox"].toggle {
     color: var(--white);
 }
 
+.blackText {
+    color: var(--black);
+}
+
 .techFont {
     font-family: var(--techFont);
 }
@@ -199,5 +203,11 @@ nav li:hover {
         margin-top: 85px;
         justify-content: center;
         font-size: 60px;
+    } 
+}
+
+@media only screen and (max-width: 991px) {
+    .hideLogo {
+        display: none;
     } 
 }

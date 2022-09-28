@@ -18,10 +18,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link id="css-light-switch" rel="stylesheet" type="text/css" href="/css/style.css">
 
 </head>
-<nav class="navbar fixed-top navbar-expand-lg bg-yellow border-dark border-bottom">
+<nav id="nav" class="navbar fixed-top navbar-expand-lg bg-yellow border-dark border-bottom">
   <button class="navbar-toggler a" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <a class="navbar-brand a"><img src="/images/icon.png" alt="Git Surveys Logo" class="rounded-circle" width="55"
@@ -36,6 +36,8 @@
         <a class="navbar-brand mr-1 title" href="/">Git Surveys</a>
       </li>
     </ul>
+     <input type="checkbox" id="toggle" class="toggle">
+  <label for="toggle"> </label>
   </div>
 </nav>
 
@@ -52,6 +54,8 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
     
+<script src="../js/lightmode.js"></script>
 </body>
+
 
 </html>

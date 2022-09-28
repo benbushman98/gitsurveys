@@ -2,7 +2,7 @@
 
     {{!-- TITLE/DATE CREATED/ID --}}
     <div class="text-center">
-        <h1 class="title">{{survey.title}}</h1>
+        <h1 class="title stayBlack">{{survey.title}}</h1>
         <p><b>Created on: </b>{{format_date survey.date_created}} </p>
         <p><b>Share link: </b>GitSurveys.com/survey/{{survey.id}}</p>
     </div>
@@ -96,10 +96,9 @@
     </table>
 
    
-     <button type="submit" class="btn custom-btn" id="submit" type="button"
-            class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Submit</button>
+     <button type="submit" class="btn custom-btn" id="submit" type="button" data-toggle="modal" data-target="#exampleModal">Submit</button>
 
-    <!--submit modal -->
+   <!-- SURVEY SUBMISSION MODAL -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -109,6 +108,4 @@
             </div>
         </div>
     </div>
-
-    </main>
 </div>
