@@ -4,7 +4,7 @@
     <div class="text-center">
         <h1 class="title stayBlack">{{survey.title}}</h1>
         <p><b>Created on: </b>{{format_date survey.date_created}} </p>
-        <p><b>Share link: </b>GitSurveys.com/survey/{{survey.id}}</p>
+        <p><b>Share link: </b>gitsurveys.com/survey/{{survey.id}}</p>
     </div>
 
     <table class="table bg-white p-5">
@@ -12,7 +12,6 @@
             <tr class="h3 techFont pb-0">
                 {{!-- QUESTION --}}
                 <th scope="col">{{survey.question}}</th>
-                <th scope="col">Results</th>
             </tr>
         </thead>
         <tbody>
@@ -27,13 +26,6 @@
                         </label>
                     </div>
                 </th>
-                <td>
-                    <div class="progress">
-                        {{!-- RESULTS 1 --}}
-                        <div class="progress-bar progress-bar-striped bg-warning  text-dark" role="progressbar" style="width: 1%"
-                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
-                    </div>
-                </td>
             </tr>
             <tr>
                 <th scope="row">
@@ -46,13 +38,6 @@
                         </label>
                     </div>
                 </th>
-                <td>
-                    <div class="progress">
-                        {{!-- RESULTS 2 --}}
-                        <div class="progress-bar progress-bar-striped bg-warning  text-dark" role="progressbar" style="width: 1%"
-                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">0%</div>
-                    </div>
-                </td>
             </tr>
             <tr>
                 <th scope="row">
@@ -65,13 +50,6 @@
                         </label>
                     </div>
                 </th>
-                <td>
-                    <div class="progress">
-                        {{!-- RESULTS 3 --}}
-                        <div class="progress-bar progress-bar-striped bg-warning  text-dark" role="progressbar" style="width: 1%"
-                            aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">0%</div>
-                    </div>
-                </td>
             </tr>
             <tr>
                 <th scope="row">
@@ -84,13 +62,6 @@
                         </label>
                     </div>
                 </th>
-                <td>
-                    <div class="progress">
-                        {{!-- RESULTS 4 --}}
-                        <div class="progress-bar progress-bar-striped bg-warning text-dark" role="progressbar" style="width: 1%"
-                            aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">0%</div>
-                    </div>
-                </td>
             </tr>
         </tbody>
     </table>
