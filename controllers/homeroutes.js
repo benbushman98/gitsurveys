@@ -29,7 +29,7 @@ router.get('/signup', (req, res) => {
 });
 
 
-//GET SINGLE SURVEY PAGE - THIS WORKS ✔️✔️ MAYBE DON'T NEED THIS
+//GET SINGLE SURVEY PAGE - THIS WORKS ✔️✔️
 router.get('/survey/:id', async (req, res) => {
   try{
     const surveyData = await Survey.findOne(

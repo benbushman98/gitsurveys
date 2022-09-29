@@ -18,6 +18,3 @@ const toggleLightMode = async () => {
 
 const toggleBtn = document.getElementById('toggle');
 toggleBtn.addEventListener('click', toggleLightMode);
-
-
-  
